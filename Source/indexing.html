@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Ecosystem Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="StyleSheets.css"/>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center">LIBRARY SYSTEM</h1>
+      <div class="search-bar d-flex justify-content-between col-10 mx-auto">
+        <div class="searchbar">
+          <input type="text" class="form-control" placeholder="Search" />
+          <i class="bi bi-search"></i>
+        </div>
+        <div class="signIn">
+          <button href="#" class="sign btn btn-primary">Sign In</button>
+          <article class="round-img d-inline ms-3">
+            <img src="../images/mylogo.png" alt="logo" style="height: 50px;width: 50px;margin-left: 0px;border-radius: 50%;">
+          </article>
+        </div>
+      </div>
+      <nav class="cNavbar col-lg-10 col-md-6 mx-auto">
+        <ul class="mx-auto col-lg-7 d-flex justify-content-between">
+          <li><a href="#topics">Topics</a></li>
+          <li><a href="#suggestion">Suggestions</a></li>
+          <li><a href="#latest">Latest</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+
+    <main>
+      <div class="home-section" id="topics">
+        <div class="col-lg-11 mx-auto">
+          <img src="../images/image2.jpg" alt="Library one">
+          <div class="absolute-sect">
+            <p>Short Statement</p> <!-- Dive into realms where knowledge whispers timeless secrets. -->
+            <p><a href="#" class="text-center">Boundless knowledge</a></p>
+          </div>
+          <div class="absolute-sect-overlay">
+            <div class="absolute-sect-overlay-div">
+              <h3 class="text-center">Topics Available</h3>
+              <ul>
+                <li>Technology</li>
+                <li>Business</li>
+                <li>Science</li>
+                <li>Fiction</li>
+                <li>Documentaries</li>
+                <li>Mathematics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arrivals-section" id="latest">
+        <h1 class="col-lg-11 mx-auto">NEW ARRIVALS</h1>
+        <div id="carouselExampleCaptions" class="carousel slide col-lg-10 mx-auto" data-bs-ride="carousel" style="margin-left: 40px;margin-right: 40px;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3  w-60">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/novel3.jpeg" class="card-img-top myCard-img" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">MidNight's Children</h5>
+                      <p class="card-text">
+                        "Midnight's Children" intertwines India's transition from
+                          colonialism to independence.Celebrated for 
+                          magical realism and historical insights.
+                      </p>
+                      <span class="price-tag">Price: $14.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/shopping.webp" class="card-img-top myCard-img" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Joshua Dalzelle Warship</h5>
+                      <p class="card-text">
+                        " "Warship" kicks off the Black Fleet Trilogy with high-octane space
+                          opera excitement. Commander Jackson Wolfe navigates political intrigue 
+                          and threats aboard the aging warship Blue Jacket. A must-read for sci-fi enthusiasts.
+                      </p>
+                      <span class="price-tag">Price: $12.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/fiction3.webp" class="card-img-top myCard-img" alt="The Last Hero by Terry Pratchett">
+                    <div class="card-body">
+                      <h5 class="card-title">The Last Hero</h5>
+                      <p class="card-text">
+                        In "The Last Hero," Terry Pratchett returns to Discworld with humor and adventure. 
+                        Old heroes embark on a quest to challenge the gods, filled with wit, humor, and clever
+                          illustrations.
+                      </p>
+                      <span class="price-tag">Price: $13.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/fiction4.webp" class="card-img-top myCard-img" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Joshua Dalzelle Call to Arms</h5>
+                      <p class="card-text">
+                        "Call to Arms" is a gripping continuation of the Black Fleet Trilogy
+                        , where Commander Wolfe faces an escalating war threatening humanity's 
+                        existence. Filled with action and character depth, it's a must-read for
+                          military sci-fi fans.
+                      </p>
+                      <span class="price-tag">Price: $12.99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="carousel-caption d-none d-md-block">
+                <h5>First slide </h5>
+                <p>FICTION RESOURCES,ALL ACCESSIBLE AT A FRIENDLY COST</p>
+              </div> -->
+            </div>
+            <div class="carousel-item">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/romance1.jpg" class="card-img-top myCard-img" alt="The Complete Guide to Maltese by Tarah Schwartz">
+                    <div class="card-body">
+                      <h5 class="card-title">The Complete Guide to Maltese by Tarah Schwartz</h5>
+                      <p class="card-text">An essential handbook offering comprehensive insights into caring for and 
+                        training Maltese dogs, perfect for new and experienced pet owners.
+                    </p>
+                    <span class="price-tag">Price: $18.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/novel7.jpg" class="card-img-top myCard-img" alt="Unbreakable Love by Emma Scott ">
+                    <div class="card-body">
+                      <h5 class="card-title">Unbreakable Love by Emma Scott</h5>
+                      <p class="card-text">A heartwarming romance where two souls overcome life's
+                          obstacles to discover an enduring and transformative love that defies all odds.</p>
+                          <span class="price-tag">Price: $14.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/novel8.jpg" class="card-img-top myCard-img" alt="Through to You by Lauren Barnholdt">
+                    <div class="card-body">
+                      <h5 class="card-title">Through to You by Lauren Barnholdt</h5>
+                      <p class="card-text">A captivating tale of love and second chances, where opposites
+                          attract and past mistakes lead to unexpected, heartfelt connections.</p>
+                      <span class="price-tag">Price: $12.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/novel6.jpeg" class="card-img-top myCard-img" alt="Love's Sacrifice by Karen Witemeyer">
+                    <div class="card-body">
+                      <h5 class="card-title">Love's Sacrifice by Karen Witemeyer</h5>
+                      <p class="card-text">A moving historical romance where love and faith are 
+                        tested, highlighting the ultimate sacrifices made for true devotion and happiness.
+                      </p>
+                      <span class="price-tag">Price: $13.99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Heartwarming Reads and Essential Guides: New Arrivals</p>
+              </div> -->
+            </div>
+            <div class="carousel-item">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/knovel9.jpeg" class="card-img-top myCard-img" alt="When Do Hippos Play? by Thomas Weiser">
+                    <div class="card-body">
+                      <h5 class="card-title">When Do Hippos Play? by Thomas Weiser</h5>
+                      <p class="card-text">Discover the secret nighttime adventures of 
+                        hippos in this charming, beautifully illustrated story perfect 
+                        for young readers and bedtime tales.
+                      </p>
+                      <span class="price-tag">Price: $10.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/knovel10.webp" class="card-img-top myCard-img" alt="Jungle Book by Rudyard Kipling">
+                    <div class="card-body">
+                      <h5 class="card-title">Jungle Book by Rudyard Kipling</h5>
+                      <p class="card-text">oin Mowgli and his animal friends in this timeless adventure 
+                        through the jungle, filled with excitement, danger, and valuable life lessons.
+                      </p>
+                      <span class="price-tag">Price: $12.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/knovel12.webp" class="card-img-top myCard-img" alt="The Book That Can Read Your Mind by Mindy Mitchell">
+                    <div class="card-body">
+                      <h5 class="card-title">The Book That Can Read Your Mind by Mindy Mitchell</h5>
+                      <p class="card-text">A magical book that knows what you're thinking, 
+                        inviting kids on an interactive journey of fun surprises and delightful imagination.
+                      </p>
+                      <span class="price-tag">Price: $11.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/knovel10.jpg" class="card-img-top myCard-img" alt="The Game of Wit by Sarah Johnson">
+                    <div class="card-body">
+                      <h5 class="card-title">The Game of Wit by Sarah Johnson</h5>
+                      <p class="card-text">Challenge your mind with this engaging collection
+                          of puzzles, riddles, and brainteasers designed to entertain and stimulate
+                          young thinkers.
+                      </p>
+                      <span class="price-tag">Price: $9.99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Enchanting Adventures and Clever Challenges: New Arrivals in Children's Books</p>
+              </div> -->
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="home2-section">
+        <div class="col-lg-11 mx-auto">
+          <div class="">
+            <img src="../images/serene3.jpg" alt="Library one" >
+            <div class="absolute-sect">
+              <p>Brief Statement</p>
+              <p><a href="#" style="padding-top: 40px;">Boundless knowledge</a></p>
+            </div>
+            <div class="absolute-sect-overlay  absolute-sect-overlay-right">
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="suggestion">
+        <div class="recom1" style="margin-bottom: 2rem;">
+          <h3>Recommendedations Just for you</h3>
+        </div>
+        <div id="carouselExampleCaptions" class="carousel slide col-lg-10 mx-auto" data-bs-ride="carousel" style="margin-left: 40px;margin-right: 40px;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3  w-60">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/novel3.jpeg" class="card-img-top myCard-img" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">MidNight's Children</h5>
+                      <p class="card-text">
+                        "Midnight's Children" intertwines India's transition from
+                          colonialism to independence.Celebrated for 
+                          magical realism and historical insights.
+                      </p>
+                      <span class="price-tag">Price: $14.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/shopping.webp" class="card-img-top myCard-img" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Joshua Dalzelle Warship</h5>
+                      <p class="card-text">
+                        " "Warship" kicks off the Black Fleet Trilogy with high-octane space
+                          opera excitement. Commander Jackson Wolfe navigates political intrigue 
+                          and threats aboard the aging warship Blue Jacket. A must-read for sci-fi enthusiasts.
+                      </p>
+                      <span class="price-tag">Price: $12.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/fiction3.webp" class="card-img-top myCard-img" alt="The Last Hero by Terry Pratchett">
+                    <div class="card-body">
+                      <h5 class="card-title">The Last Hero</h5>
+                      <p class="card-text">
+                        In "The Last Hero," Terry Pratchett returns to Discworld with humor and adventure. 
+                        Old heroes embark on a quest to challenge the gods, filled with wit, humor, and clever
+                          illustrations.
+                      </p>
+                      <span class="price-tag">Price: $13.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/fiction4.webp" class="card-img-top myCard-img" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Joshua Dalzelle Call to Arms</h5>
+                      <p class="card-text">
+                        "Call to Arms" is a gripping continuation of the Black Fleet Trilogy
+                        , where Commander Wolfe faces an escalating war threatening humanity's 
+                        existence. Filled with action and character depth, it's a must-read for
+                          military sci-fi fans.
+                      </p>
+                      <span class="price-tag">Price: $12.99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="carousel-caption d-none d-md-block">
+                <h5>First slide </h5>
+                <p>FICTION RESOURCES,ALL ACCESSIBLE AT A FRIENDLY COST</p>
+              </div> -->
+            </div>
+            <div class="carousel-item">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/romance1.jpg" class="card-img-top myCard-img" alt="The Complete Guide to Maltese by Tarah Schwartz">
+                    <div class="card-body">
+                      <h5 class="card-title">The Complete Guide to Maltese by Tarah Schwartz</h5>
+                      <p class="card-text">An essential handbook offering comprehensive insights into caring for and 
+                        training Maltese dogs, perfect for new and experienced pet owners.
+                    </p>
+                    <span class="price-tag">Price: $18.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/novel7.jpg" class="card-img-top myCard-img" alt="Unbreakable Love by Emma Scott ">
+                    <div class="card-body">
+                      <h5 class="card-title">Unbreakable Love by Emma Scott</h5>
+                      <p class="card-text">A heartwarming romance where two souls overcome life's
+                          obstacles to discover an enduring and transformative love that defies all odds.</p>
+                          <span class="price-tag">Price: $14.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/novel8.jpg" class="card-img-top myCard-img" alt="Through to You by Lauren Barnholdt">
+                    <div class="card-body">
+                      <h5 class="card-title">Through to You by Lauren Barnholdt</h5>
+                      <p class="card-text">A captivating tale of love and second chances, where opposites
+                          attract and past mistakes lead to unexpected, heartfelt connections.</p>
+                      <span class="price-tag">Price: $12.99</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="../images/novel6.jpeg" class="card-img-top myCard-img" alt="Love's Sacrifice by Karen Witemeyer">
+                    <div class="card-body">
+                      <h5 class="card-title">Love's Sacrifice by Karen Witemeyer</h5>
+                      <p class="card-text">A moving historical romance where love and faith are 
+                        tested, highlighting the ultimate sacrifices made for true devotion and happiness.
+                      </p>
+                      <span class="price-tag">Price: $13.99</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Heartwarming Reads and Essential Guides: New Arrivals</p>
+              </div> -->
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div> 
+
+      <div class="story-section" id="about">
+        <div class="story-section-div col-lg-11 mx-auto d-flex">
+          <div class="story-paragraph col-lg-5">
+            <div class="">
+              <span class="mb-3" style="color: white;">OUR STORY</span>
+            </div>
+            <div class="story-paragraph">
+              <p>Experience our modern library web app, where traditional storytelling converges with digital innovation. 
+                Offering a diverse digital collection, personalized recommendations, and collaborative tools, we seamlessly
+                  integrate the richness of physical libraries with the convenience of technology. Navigate effortlessly, 
+                  explore extensively, and create your literary journey with intuitive features designed for users of all 
+                  backgrounds. From e-books to audiobooks, our platform caters to every reading preference, ensuring an 
+                  enriching experience for students, scholars, and lifelong learners alike. Embrace the boundless 
+                  possibilities of knowledge discovery in a secure and user-friendly environment. Welcome to our
+                  web app - where every story finds its digital home, waiting to be explored, cherished, and shared 
+                  with the world.</p>
+            </div>
+            <div>
+              <button class="btn btn-primary">READ MORE</button>
+            </div>
+          </div>
+          <div class="story-img col-lg-5">
+            <img src="../images/bright1.jpg" alt="Our surrounding" class="">
+          </div>
+        </div>
+        
+      </div>
+     <!--  <div class="">          
+        <div class="">
+          <h3>FOLLOW US ON YOUR FAVOURITE PLATFORM</h3>
+        </div>
+        <div class="d-flex">
+          <div class="">
+              <div class="">
+                <img src="../images/logos/instagram.jpeg" alt="instagram img">
+              </div>
+              <div id="">
+                <span class="">&copy;Instagram</span>
+              </div>
+          </div>
+          <div class="">
+              <div class="img1">
+                <img src="../images/logos/twitter.jpeg" alt="twitter logo">
+              </div>
+              <div id="">
+                <span class="">&copy;Twitter</span>
+              </div>
+          </div>
+          <div class="">
+              <div class="img1">
+                <img src="../images/logos/facebook.jpeg" alt="facebook logo">
+              </div>
+              <div id="">
+                <span class="">&copy;FACEBOOK</span>
+              </div>
+          </div>
+          <div class="">
+            <div class="img1">
+              <img src="../images/logos/linkedin.png" alt="LinkedIn logo">
+            </div>
+            <div id="">
+              <span class="">&copy;LINKEDIN</span>
+            </div>
+          </div>
+          <div class="">
+            <div class="img1">
+              <img src="../images/logos/tiktok.png" alt="Tiktok logo">
+            </div>
+            <div id="">
+              <span class="">&copy;TIKTOK</span>
+            </div>
+          </div>
+                      
+        </div>                   
+      </div> -->   
+    </main>
+    <footer>
+      <div class="col-lg-10 d-flex justify-content-between mx-auto">
+        <div class="services">
+          <span><b>Our Products</b></span>
+          <hr>
+          <ul>
+            <li>Fiction genre</li>
+            <li>Romantic genre</li>
+            <li>Kindergatten stories</li>
+            <li>Love books</li>
+            <li>Literature books</li>
+          </ul>
+        </div>
+        <div class="services">
+          <span><b>Our Location</b></span>
+          <hr>
+          <ul>
+            <li>P.O BOX 198</li>
+            <li>SCHESSE.</li>
+            <li>CHINA</li>
+            <li>MACHAKOS</li>
+            <li>NAIROBI</li>
+            <li>KIAMBU</li>
+          </ul>          
+        </div>
+        <div class="services">
+          <span><b>Reach us at</b></span>
+          <hr>
+          <ul>
+            <li>@libraqueen@gmail.com</li>
+            <li>+254781358926</li>
+            <li>@libracustomercaredesk</li>            
+          </ul>
+        </div>
+        <div class="services social-media-sect">
+          <span><b>Social Media</b></span>
+          <hr>
+          <div class="social-icons d-flex justify-content-between">
+            <a href="#" class="m-2 d-flex align-items-center justify-content-Center">
+              <img src="../images/FACEBOOK1.webp" class="mx-auto"  alt="fb">
+            </a>   
+            <a href="#" class="m-2 d-flex align-items-center justify-content-Center">
+              <img src="../images/Instagram.webp" class="mx-auto"  alt="iG">
+            </a>       
+            <a href="#" class="m-2 d-flex align-items-center justify-content-Center">
+              <img src="../images/linkedIN.webp"  class="mx-auto" alt="in">
+            </a> 
+          </div>     
+        </div>        
+      </div>
+      <p class="text-center m-0 fs-6">&copy; QUEENIELIBRARY 2024 <em>All Rights reserved</em></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  </body>
+</html>
