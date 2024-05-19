@@ -236,7 +236,6 @@ footer {
       padding: 20px 10px;
     }
     .story-img {
-      width: 500px;
       display: none;
     }
   }
@@ -294,6 +293,9 @@ footer {
     bottom: -2rem;
     left: 35%;
   }
+  .story-img {
+      display: none;
+    }
 }
 
 /* utility */
