@@ -4,43 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library Ecosystem Design</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="StyleSheets.css"/>
   </head>
   <body>
     <header>
-      <h1 class="text-center">LIBRARY SYSTEM</h1>
-      <div class="search-bar d-flex justify-content-between col-10 mx-auto">
-        <div class="searchbar">
+      <h1 class="text-center page-title">LIBRARY SYSTEM</h1>
+      <div class="search-bar d-sm-none d-md-flex justify-content-between col-10 mx-auto">
+        <div class="searchbar col-md-2">
           <input type="text" class="form-control" placeholder="Search" />
           <i class="bi bi-search"></i>
         </div>
-        <div class="signIn">
+        <div class="signIn col-md-2 d-flex align-items-center justify-content-between">
           <button href="#" class="sign btn btn-primary">Sign In</button>
-          <article class="round-img d-inline ms-3">
+          <article class="round-img d-inline ms-md-2">
             <img src="../images/mylogo.png" alt="logo" style="height: 50px;width: 50px;margin-left: 0px;border-radius: 50%;">
           </article>
         </div>
       </div>
-      <nav class="cNavbar col-lg-10 col-md-6 mx-auto">
-        <ul class="mx-auto col-lg-7 d-flex justify-content-between">
+      <nav class="cNavbar d-sm-none d-md-block col-lg-10 col-md-8 mx-md-auto">
+        <ul class="mx-auto col-lg-7 d-flex justify-content-between ps-2 pe-2">
           <li><a href="#topics">Topics</a></li>
           <li><a href="#suggestion">Suggestions</a></li>
           <li><a href="#latest">Latest</a></li>
           <li><a href="#about">About Us</a></li>
         </ul>
       </nav>
-      <hr>
+      <!-- only in small devices -->
+      <div class="col-10 mx-auto div-sm-nav" style="position: relative;margin: 2rem 0rem;">
+        <div class="d-flex justify-content-between col-12">
+          <div class="d-flex align-items-center justify-content-start col-4">
+            <input type="text" class="form-control" placeholder="Search" />
+            <!-- <i class="bi bi-search"></i> -->
+          </div>
+          <div class="col-sm-5 d-flex align-items-center justify-content-end">
+            <a href="#nav-small" class="" data-bs-toggle="collapse" aria-expanded="false" aria-controls="nav-small">Menu</a>
+          </div>
+        </div>
+        <div class="collapse nav-small" id="nav-small">
+          <div class="signIn d-flex align-items-center">
+            <article class="round-img d-inline me-3">
+              <img src="../images/mylogo.png" alt="logo" style="height: 50px;width: 50px;margin-left: 0px;border-radius: 50%;">
+            </article>
+            <button href="#" class="sign btn btn-primary">Sign In</button>
+          </div>
+          <ul class="mx-auto d-flex flex-column">
+            <li><a href="#topics">Topics</a></li>
+            <li><a href="#suggestion">Suggestions</a></li>
+            <li><a href="#latest">Latest</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <div class="home-section" id="topics">
-        <div class="col-lg-11 mx-auto">
-          <img src="../images/image2.jpg" alt="Library one">
+    <main class="">
+      <div class="home-section col-sm-10 mx-sm-auto" id="topics">
+        <div class="col-sm-12 col-lg-11 mx-lg-auto">
+          <img src="../images/bright1.jpg" alt="Library one">
           <div class="absolute-sect">
-            <p>Short Statement</p> <!-- Dive into realms where knowledge whispers timeless secrets. -->
+            <p>Short Statement</p>
             <p><a href="#" class="text-center">Boundless knowledge</a></p>
           </div>
           <div class="absolute-sect-overlay">
@@ -60,7 +84,7 @@
       </div>
       <div class="arrivals-section" id="latest">
         <h1 class="col-lg-11 mx-auto">NEW ARRIVALS</h1>
-        <div id="carouselExampleCaptions" class="carousel slide col-lg-10 mx-auto" data-bs-ride="carousel" style="margin-left: 40px;margin-right: 40px;">
+        <div id="carouselExampleCaptions" class="carousel slide col-md-10 mx-auto" data-bs-ride="carousel" style="margin-left: 40px;margin-right: 40px;">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3  w-60">
@@ -122,10 +146,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="carousel-caption d-none d-md-block">
-                <h5>First slide </h5>
-                <p>FICTION RESOURCES,ALL ACCESSIBLE AT A FRIENDLY COST</p>
-              </div> -->
             </div>
             <div class="carousel-item">
               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
@@ -143,7 +163,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/novel7.jpg" class="card-img-top myCard-img" alt="Unbreakable Love by Emma Scott ">
+                    <img src="../images/First_carousel/FicVimg2.jpg" class="card-img-top myCard-img" alt="Unbreakable Love by Emma Scott ">
                     <div class="card-body">
                       <h5 class="card-title">Unbreakable Love by Emma Scott</h5>
                       <p class="card-text">A heartwarming romance where two souls overcome life's
@@ -176,16 +196,12 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Heartwarming Reads and Essential Guides: New Arrivals</p>
-              </div> -->
             </div>
             <div class="carousel-item">
               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/knovel9.jpeg" class="card-img-top myCard-img" alt="When Do Hippos Play? by Thomas Weiser">
+                    <img src="../images/First_carousel/BusVimg1.jpg" class="card-img-top myCard-img" alt="When Do Hippos Play? by Thomas Weiser">
                     <div class="card-body">
                       <h5 class="card-title">When Do Hippos Play? by Thomas Weiser</h5>
                       <p class="card-text">Discover the secret nighttime adventures of 
@@ -198,7 +214,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/knovel10.webp" class="card-img-top myCard-img" alt="Jungle Book by Rudyard Kipling">
+                    <img src="../images/First_carousel/BusVimg2.jpg" class="card-img-top myCard-img" alt="Jungle Book by Rudyard Kipling">
                     <div class="card-body">
                       <h5 class="card-title">Jungle Book by Rudyard Kipling</h5>
                       <p class="card-text">oin Mowgli and his animal friends in this timeless adventure 
@@ -210,7 +226,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/knovel12.webp" class="card-img-top myCard-img" alt="The Book That Can Read Your Mind by Mindy Mitchell">
+                    <img src="../images/First_carousel/TechVimg2.jpg" class="card-img-top myCard-img" alt="The Book That Can Read Your Mind by Mindy Mitchell">
                     <div class="card-body">
                       <h5 class="card-title">The Book That Can Read Your Mind by Mindy Mitchell</h5>
                       <p class="card-text">A magical book that knows what you're thinking, 
@@ -222,7 +238,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/knovel10.jpg" class="card-img-top myCard-img" alt="The Game of Wit by Sarah Johnson">
+                    <img src="../images/First_carousel/TechVimg1.jpg" class="card-img-top myCard-img" alt="The Game of Wit by Sarah Johnson">
                     <div class="card-body">
                       <h5 class="card-title">The Game of Wit by Sarah Johnson</h5>
                       <p class="card-text">Challenge your mind with this engaging collection
@@ -234,11 +250,6 @@
                   </div>
                 </div>
               </div>
-              <!-- 
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Enchanting Adventures and Clever Challenges: New Arrivals in Children's Books</p>
-              </div> -->
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -260,7 +271,12 @@
               <p><a href="#" style="padding-top: 40px;">Boundless knowledge</a></p>
             </div>
             <div class="absolute-sect-overlay  absolute-sect-overlay-right">
-
+              <div class="activity col-10 ms-sm-3">
+                  <h2>Community Programs and Services</h2>
+                  <p>Libraries organize events like author talks and reading clubs,
+                    provide research assistance, maintain digital resources, and offer community education programs,
+                      creating a vibrant learning environment.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -275,7 +291,7 @@
               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3  w-60">
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/novel3.jpeg" class="card-img-top myCard-img" alt="...">
+                    <img src="../images/img_latest/Scimg1.webp" class="card-img-top myCard-img" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">MidNight's Children</h5>
                       <p class="card-text">
@@ -289,7 +305,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/shopping.webp" class="card-img-top myCard-img" alt="...">
+                    <img src="../images/img_latest/TecHimg1.jpeg" class="card-img-top myCard-img" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Joshua Dalzelle Warship</h5>
                       <p class="card-text">
@@ -303,7 +319,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/fiction3.webp" class="card-img-top myCard-img" alt="The Last Hero by Terry Pratchett">
+                    <img src="../images/img_latest/TecHimg2.jpeg" class="card-img-top myCard-img" alt="The Last Hero by Terry Pratchett">
                     <div class="card-body">
                       <h5 class="card-title">The Last Hero</h5>
                       <p class="card-text">
@@ -317,7 +333,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/fiction4.webp" class="card-img-top myCard-img" alt="...">
+                    <img src="../images/img_latest/TecHimg3.jpeg" class="card-img-top myCard-img" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Joshua Dalzelle Call to Arms</h5>
                       <p class="card-text">
@@ -331,16 +347,12 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="carousel-caption d-none d-md-block">
-                <h5>First slide </h5>
-                <p>FICTION RESOURCES,ALL ACCESSIBLE AT A FRIENDLY COST</p>
-              </div> -->
             </div>
             <div class="carousel-item">
               <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/romance1.jpg" class="card-img-top myCard-img" alt="The Complete Guide to Maltese by Tarah Schwartz">
+                    <img src="../images/img_latest/Docimg1.jpeg" class="card-img-top myCard-img" alt="The Complete Guide to Maltese by Tarah Schwartz">
                     <div class="card-body">
                       <h5 class="card-title">The Complete Guide to Maltese by Tarah Schwartz</h5>
                       <p class="card-text">An essential handbook offering comprehensive insights into caring for and 
@@ -352,7 +364,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/novel7.jpg" class="card-img-top myCard-img" alt="Unbreakable Love by Emma Scott ">
+                    <img src="../images/img_latest/Scimg2b.webp" class="card-img-top myCard-img" alt="Unbreakable Love by Emma Scott ">
                     <div class="card-body">
                       <h5 class="card-title">Unbreakable Love by Emma Scott</h5>
                       <p class="card-text">A heartwarming romance where two souls overcome life's
@@ -363,7 +375,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/novel8.jpg" class="card-img-top myCard-img" alt="Through to You by Lauren Barnholdt">
+                    <img src="../images/img_latest/Busimg1.jpg" class="card-img-top myCard-img" alt="Through to You by Lauren Barnholdt">
                     <div class="card-body">
                       <h5 class="card-title">Through to You by Lauren Barnholdt</h5>
                       <p class="card-text">A captivating tale of love and second chances, where opposites
@@ -374,7 +386,7 @@
                 </div>
                 <div class="col">
                   <div class="card h-100">
-                    <img src="../images/novel6.jpeg" class="card-img-top myCard-img" alt="Love's Sacrifice by Karen Witemeyer">
+                    <img src="../images/img_latest/Mathimg1.jpeg" class="card-img-top myCard-img" alt="Love's Sacrifice by Karen Witemeyer">
                     <div class="card-body">
                       <h5 class="card-title">Love's Sacrifice by Karen Witemeyer</h5>
                       <p class="card-text">A moving historical romance where love and faith are 
@@ -385,10 +397,6 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Heartwarming Reads and Essential Guides: New Arrivals</p>
-              </div> -->
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -403,8 +411,8 @@
       </div> 
 
       <div class="story-section" id="about">
-        <div class="story-section-div col-lg-11 mx-auto d-flex">
-          <div class="story-paragraph col-lg-5">
+        <div class="story-section-div col-lg-11 mx-auto d-flex align-items-center">
+          <div class="story-paragraph col-lg-5 col-sm-10">
             <div class="">
               <span class="mb-3" style="color: white;">OUR STORY</span>
             </div>
@@ -423,63 +431,15 @@
               <button class="btn btn-primary">READ MORE</button>
             </div>
           </div>
-          <div class="story-img col-lg-5">
-            <img src="../images/bright1.jpg" alt="Our surrounding" class="">
+          <div class="story-img col-lg-5 ms-lg-4">
+            <img src="../images/bright1.jpg" alt="Our surrounding" width="512" class="">
           </div>
         </div>
         
-      </div>
-     <!--  <div class="">          
-        <div class="">
-          <h3>FOLLOW US ON YOUR FAVOURITE PLATFORM</h3>
-        </div>
-        <div class="d-flex">
-          <div class="">
-              <div class="">
-                <img src="../images/logos/instagram.jpeg" alt="instagram img">
-              </div>
-              <div id="">
-                <span class="">&copy;Instagram</span>
-              </div>
-          </div>
-          <div class="">
-              <div class="img1">
-                <img src="../images/logos/twitter.jpeg" alt="twitter logo">
-              </div>
-              <div id="">
-                <span class="">&copy;Twitter</span>
-              </div>
-          </div>
-          <div class="">
-              <div class="img1">
-                <img src="../images/logos/facebook.jpeg" alt="facebook logo">
-              </div>
-              <div id="">
-                <span class="">&copy;FACEBOOK</span>
-              </div>
-          </div>
-          <div class="">
-            <div class="img1">
-              <img src="../images/logos/linkedin.png" alt="LinkedIn logo">
-            </div>
-            <div id="">
-              <span class="">&copy;LINKEDIN</span>
-            </div>
-          </div>
-          <div class="">
-            <div class="img1">
-              <img src="../images/logos/tiktok.png" alt="Tiktok logo">
-            </div>
-            <div id="">
-              <span class="">&copy;TIKTOK</span>
-            </div>
-          </div>
-                      
-        </div>                   
-      </div> -->   
+      </div> 
     </main>
     <footer>
-      <div class="col-lg-10 d-flex justify-content-between mx-auto">
+      <div class="col-lg-10 d-flex flex-wrap justify-content-between mx-auto">
         <div class="services">
           <span><b>Our Products</b></span>
           <hr>
@@ -530,7 +490,7 @@
       </div>
       <p class="text-center m-0 fs-6">&copy; QUEENIELIBRARY 2024 <em>All Rights reserved</em></p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../scripts/index.js"></script>
   </body>
 </html>
