@@ -102,9 +102,6 @@ header h1{
   position: relative;
   padding-bottom: 30px;
 }
-.myCard-img {
-  
-}
 .price-tag {
   width: 115px;
   border-radius: 10px;
@@ -117,14 +114,14 @@ header h1{
 }
 
 .story-section {
-  margin: 6rem 0;
+  margin: 3rem 0;
 }
 .story-section-div {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px 10px;
 }
-.story-paragraph {
-}
+/*.story-paragraph {
+}*/
 
 footer {
   background-color: rgba(0, 0, 0, 0.5);
@@ -151,6 +148,30 @@ footer {
     border-radius: 50%;
     background-color: white;
   }
+}
+.Study_sect{
+ 
+  margin-bottom: 10px;
+  color: white;
+}
+
+.Study_sect img{
+  width:100% ;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .Study_sect img {
+    height: 10rem;
+  }
+}
+
+/* for screens that are 992px wide or more, set the image height to 10rem */
+@media (min-width: 992px) {
+  .Study_sect img {
+    height: 10rem;
+  }
+  
+
 }
 
 /* screen size media */
